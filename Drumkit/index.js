@@ -9,20 +9,19 @@ for (var i=0; i<document.querySelectorAll(".drum").length;i++) {
         makesound(whichbtn);
     });
 
-}
+};
 //keypress
 
-document.addEventListener("keydown", function(event) {
-    console.log(event.key);
+document.addEventListener("keypress", function(event) {
+    makesound(event.key);
 });
-
 
 
 function makesound(key){
 switch (key) {
     case "w":
-        var sound1 = new Audio("sounds/crash.mp3")
-        sound1.play()
+        var sound1 = new Audio("sounds/crash.mp3");
+        sound1.play();
         break;
     
 
@@ -56,7 +55,7 @@ switch (key) {
         sound7.play();
         break;
     default:
-        alert("error");
+        console.log("error");
         break;
    }
 }
