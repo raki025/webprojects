@@ -1,15 +1,25 @@
 //selecting class .drum to target all buttons
-
+// button click
 for (var i=0; i<document.querySelectorAll(".drum").length;i++) {
 
-    document.querySelectorAll(".drum")[i].addEventListener("click", clickhandle)
+    document.querySelectorAll(".drum")[i].addEventListener("click", 
+        function clickhandle(){
+        var whichbtn = this.innerHTML;
+    
+        makesound(whichbtn);
+    });
 
-    // this function extract class string 
-function clickhandle(){
-    var whichbtn = this.innerHTML;
-    console.log(whichbtn)
-    //playing sound for each button whith string got from whichbtn
-   switch (whichbtn) {
+}
+//keypress
+
+document.addEventListener("keydown", function(event) {
+    console.log(event.key);
+});
+
+
+
+function makesound(key){
+switch (key) {
     case "w":
         var sound1 = new Audio("sounds/crash.mp3")
         sound1.play()
@@ -49,9 +59,5 @@ function clickhandle(){
         alert("error");
         break;
    }
-   
-}
 }
 
-var sound = new Audio("sounds/kick-bass.mp3")
-sound.play()
