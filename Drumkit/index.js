@@ -1,22 +1,31 @@
 //selecting class .drum to target all buttons
-// button click
+// finding button click
 for (var i=0; i<document.querySelectorAll(".drum").length;i++) {
 
     document.querySelectorAll(".drum")[i].addEventListener("click", 
         function clickhandle(){
         var whichbtn = this.innerHTML;
-    
+
+        // makesound function call back it take the click value 
         makesound(whichbtn);
+
+        //callback function for animation
+
+        btnanimation(whichbtn);
     });
 
 };
-//keypress
+//finding the keypress
 
 document.addEventListener("keypress", function(event) {
+    // makesound function call back it take the keypress value 
     makesound(event.key);
+
+    //callback function for animation
+    btnanimation(event.key);
 });
 
-
+// making sound on keypress and mosue  click
 function makesound(key){
 switch (key) {
     case "w":
@@ -60,3 +69,15 @@ switch (key) {
    }
 }
 
+
+//button animation 
+function btnanimation(currentkey) {
+    // here it will take the button pressed or clicked then add a css class pressed to it 
+    var activebtn = document.querySelector("."+currentkey);
+    activebtn.classList.add("pressed");
+    // it remove the css class after 100milisec 
+    setTimeout( function removeani() {
+        activebtn.classList.remove("pressed")
+        
+    }, 100  )
+};
