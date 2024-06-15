@@ -1,0 +1,16 @@
+{
+  "name": "parctice",
+  "version": "1.0.0",
+  "description": "learnig node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raki",
+  "license": "ISC",
+  "dependencies": {
+    "qr-code-scanner-sumzai": "^1.0.0",
+    "sillyname": "^0.1.0",
+    "superheros": "^1.0.0"
+  }
+}
