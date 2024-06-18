@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(235, 235, 235);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form_container {
+    align-items: center;
+    background-color: aqua;
+    width: 800px;
+    height: auto;
+    margin-top: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 400px;
+    position: relative;
+    border-radius: 15px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_form</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+    <div class="form_container">
+        
+        <form action="/submit1"  class="form" method="post">
+            <div class="name">
+                <label for="nameinput">Name</label>
+                <input type="text" class="nameinput">
+            </div>
+            <div class="email">
+                <label for="email">email</label>
+                <input type="email" class="emailinput">
+            </div>
+            <div class="number">
+                <label for="numinput">number</label>
+                <input type="number" class="numinput">
+            </div>
+            <div class="select">
+                <label for="course">choose</label>
+                <select name="course" id="course">
+                    <option value="javascript">javascript</option>
+                    <option value="python">python</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="node.js">node.js</option>
+                </select>
+            </div>
+            <div class="submit">
+              <button  id="button1">submit</button>
+                
+            </div>
+            
+        </form>
+    </div>
+<script src="app11.js"></script>
+</body>
+</html>
