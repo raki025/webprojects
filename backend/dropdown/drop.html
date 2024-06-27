@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Div Example</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show/Hide Div Based on Dropdown Selection</h1>
+    <select id="dropdown" onchange="toggleDivs()">
+        <option value="none">Select an option</option>
+        <option value="div1">Show Div 1</option>
+        <option value="div2">Show Div 2</option>
+        <option value="div3">Show Div 3</option>
+        <option value="div4">Show Div 4</option>
+    </select>
+
+    <div id="div1" class="hidden">
+        <h2>Div 1</h2>
+        <p>This is the content of Div 1.</p>
+    </div>
+
+    <div id="div2" class="hidden">
+        <h2>Div 2</h2>
+        <p>This is the content of Div 2.</p>
+    </div>
+
+    <div id="div3" class="hidden">
+        <h2>Div 3</h2>
+        <p>This is the content of Div 3.</p>
+    </div>
+
+    <div id="div4" class="hidden">
+        <h2>Div 4</h2>
+        <p>This is the content of Div 4.</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
