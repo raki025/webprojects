@@ -20,7 +20,8 @@ app.post("/submit",(req, res)=> {
   // console.log(req.body.pet)
   const streetname = (req.body.street);
   const petname =(req.body.pet);
-  res.send("<h1>your Band name is</h1>"`<h1>${streetname}${petname}</h1>`);
+  console.log(req.body);
+  res.send("<h1>your Band name is</h1>"+`<h1>${streetname}${petname}</h1>`);
 });
 
 app.listen(port, () => {
